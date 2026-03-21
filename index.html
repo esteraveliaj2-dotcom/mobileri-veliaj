@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mobileri Veliaj | Mobilje me Porosi në Berat | Mbi 25 Vite Eksperiencë</title>
+
+    <meta name="description" content="Mobileri Veliaj në Berat ofron kuzhina, dhomë gjumi, dyer dhe tavolina me cilësi të lartë. Mbi 25 vite eksperiencë në prodhimin e mobiljeve moderne dhe klasike. Na vizitoni në rrugën Thoma Bello.">
+
+    <meta name="keywords" content="mobileri berat, mobilje berat, kuzhina me porosi berat, dhome gjumi berat, dyer te brendshme berat, tavolina buke berat, mobilim shtepie, mobileri veliaj berat">
+
+    <meta property="og:title" content="Mobileri Veliaj - Cilësi dhe Estetikë në Berat">
+    <meta property="og:description" content="Krijo shtëpinë e ëndrrave me mobiljet tona të personalizuara.">
+    <meta property="og:image" content="foto/foto1.png">
+    <meta property="og:url" content="https://linku-yt.netlify.app">
+
+<style>
+body{
+margin:0;
+font-family:Arial, sans-serif;
+background:#f5f5f5;
+}
+
+header{
+background:white;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 60px;
+box-shadow:0 3px 10px rgba(0,0,0,0.1);
+}
+
+nav a{
+margin:0 15px;
+text-decoration:none;
+color:#333;
+font-weight:bold;
+}
+
+.hero{
+position:relative;
+height:500px;
+overflow:hidden;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+color:white;
+text-align:center;
+}
+
+.hero{
+position:relative;
+height:500px;
+overflow:hidden;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+color:white;
+text-align:center;
+}
+
+.hero::before{
+content:"";
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),
+url("foto/foto1.png");
+background-size:cover;
+background-position:center;
+z-index:-1;
+animation:zoomOut 20s ease-in-out infinite alternate;
+}
+
+@keyframes zoomOut{
+0%{
+transform:scale(1.2);
+}
+100%{
+transform:scale(1);
+}
+}
+
+.hero h1{
+font-size:48px;
+}
+
+.section-title{
+text-align:center;
+margin:60px 0 30px 0;
+font-size:32px;
+}
+
+.catalog{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+padding:0 60px 60px 60px;
+}
+
+.card{
+background:white;
+border-radius:10px;
+overflow:hidden;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+.card img{
+width:100%;
+height:200px;
+object-fit:cover;
+transition:0.4s;
+}
+
+.card:hover{
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+
+.card h3{
+text-align:center;
+padding:15px;
+}
+
+.about{
+background:#f0f0f0;
+padding:60px;
+text-align:center;
+line-height:1.7;
+}
+
+.map{
+padding:50px;
+text-align:center;
+}
+
+footer{
+background:#222;
+color:white;
+text-align:center;
+padding:30px;
+}
+
+.whatsapp{
+position:fixed;
+bottom:25px;
+right:25px;
+background:#25D366;
+color:white;
+padding:15px 20px;
+border-radius:50px;
+text-decoration:none;
+font-weight:bold;
+}
+
+/* Stili për dritaren që do hapet (Modal) */
+.modal {
+  display: none; 
+  position: fixed;
+  z-index: 1000;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.9);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  max-width: 80%;
+  max-height: 80%;
+  border-radius: 10px;
+}
+
+.close-modal {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.card a{
+display:block;
+text-decoration:none;
+color:black;
+}
+
+.catalog{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+padding:0 60px 60px 60px;
+animation:fadeUp 1s ease;
+}
+
+@keyframes fadeUp{
+from{
+opacity:0;
+transform:translateY(30px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+
+
+</style>
+
+</head>
+<body>
+
+<header>
+
+<h2>Mobileri Veliaj</h2>
+
+<nav>
+<a href="#">Home</a>
+<a href="#katalog">Katalog</a>
+<a href="#about">Rreth nesh</a>
+<a href="#kontakt">Kontakt</a>
+</nav>
+
+</header>
+
+<section class="hero">
+<h1>Mobileri Veliaj</h1>
+
+<p>Bukuri dhe funksion në çdo cep të shtëpisë.</p>
+
+</section>
+<h2 class="section-title" id="katalog">Katalogu</h2>
+
+<section class="catalog">
+<div class="card">
+  <a href="kuzhina.html">
+    <img src="foto/kuzhincc.jpeg" alt="Kuzhina">
+    <h3>Kuzhina</h3>
+  </a>
+</div>
+
+<div class="card">
+    <a href="tavolina.html">
+  <img src="foto/t1.jpeg" alt="Tavolina">
+  <h3>Tavolina</h3>
+  </a>
+</div>
+
+<div class="card">
+    <a href="dhgjumi.html">
+  <img src="foto/dhgjumic.jpeg" alt="Dhomë gjumi">
+  <h3>Dhomë gjumi</h3>
+  </a>
+</div>
+
+<div class="card">
+    <a href="dyer.html">
+  <img src="foto/dyerc.jpeg" alt="Dyer">
+  <h3>Dyer të brendshme</h3>
+  </a>
+</div>
+
+<div class="card">
+    <a href="et.html">
+  <img src="foto/portmc.jpeg" alt="Portmando & Etazher">
+  <h3>Portmando & Etazher</h3>
+  </a>
+</div>
+
+</section> 
+
+<section class="about" id="about">
+
+<h2>Rreth nesh</h2>
+<p>
+
+Mobileri Veliaj është një biznes familjar me mbi <b>25 vite eksperiencë</b> në mobilimin e shtëpive, zyrave apo ambienteve të ndryshme.
+Ne besojmë që çdo shtëpi ka një histori unike. Me mobiljet tona, ne ndihmojmë klientët të krijojnë hapësira që reflektojnë stilin dhe personalitetin e tyre. Çdo punim është rezultat i pasionit dhe përkushtimit tonë ndaj detajeve.
+
+
+</p>
+
+</section>
+<section class="map">
+
+<h2>Vendndodhja:</h2>
+
+<iframe
+src="https://www.google.com/maps?q=Berat%20Thoma%20Bello&output=embed"
+width="80%"
+height="350"
+style="border:0;border-radius:10px;"
+loading="lazy">
+</iframe>
+
+</section>
+
+<footer id="kontakt">
+
+<h3>Mobileri Veliaj</h3>
+
+<p>Mobile & WhatsApp: +355 69 474 4240</p>
+<p>Instagram: veliaj.mobileri</p>
+
+<p>Berat, rruga "Thoma Bello"</p>
+
+</footer>
+<a class="whatsapp" href="https://wa.me/355694744240" target="_blank">Chat në WhatsApp</a>
+
+
+<script>
+function shfaqPunimet(element) {
+  var modal = document.getElementById("myModal");
+  var modalImg = document.getElementById("imgFull");
+  
+  // Kontrollojmë nëse elementi ka vërtet një imazh brenda
+  var img = element.getElementsByTagName('img')[0];
+  if (img) {
+    modal.style.display = "flex";
+    modalImg.src = img.src;
+  }
+}
+
+function closeModal() {
+  document.getElementById("myModal").style.display = "none";
+}
+
+window.addEventListener('click', function(event) {
+  var modal = document.getElementById("myModal");
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+});
+</script>
+
+<div id="myModal" class="modal">
+  <span class="close-modal" onclick="closeModal()">&times;</span>
+  <img class="modal-content" id="imgFull">
+</div>
+</body>
+
+</html>
