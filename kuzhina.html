@@ -30,12 +30,7 @@
   font-size: 28px;
   font-weight: 700;
 }
-  .header-nav {
-  display: flex;
-  justify-content: center; /* rresht qendër */
-  gap: 40px; /* distanca mes linkeve */
-  margin-top: 10px;
-}
+ .header-nav { display: none; }
 
 .header-nav a {
   text-decoration: none;
@@ -69,26 +64,50 @@ nav a {
 nav a:hover { color: #e67e22; }
 
 .hero {
-  height: 550px;
-  background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
-              url("kuzhina/kuzhina1.jpeg");
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed; /* paralaks */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: white;
-  animation: fadeHero 1.5s ease;
+  height: 400px; 
+  background-attachment: scroll; 
+}
+  .sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 2000;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 32px;
+  text-decoration: none;
+  font-size: 22px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover { color: #f1f1f1; }
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.menu-icon {
+  font-size: 30px;
+  cursor: pointer;
+  position: absolute;
+  left: 20px;
+  top: 15px;
 }
 .hero h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: 60px;
-  letter-spacing: 2px;
-  font-weight: 700;
-  margin-bottom: 20px;
+  font-size: 45px; 
 }
 .hero button {
   padding: 12px 25px;
@@ -178,14 +197,24 @@ footer {
 </head>
 <body>
 <header>
-  <div class="header-top">
-    <h2>Mobileri Veliaj</h2>
-  </div>
+  <div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="index.html">Home</a>
+  <a href="index.html#about">Rreth Nesh</a>
+  <a href="index.html#kontakt">Kontakt</a>
+</div>
   <nav class="header-nav">
     <a href="index.html">Home</a>
     <a href="index.html#about">Rreth Nesh</a>
     <a href="index.html#kontakt">Kontakt</a>
   </nav>
+</header>
+
+  <header>
+  <span class="menu-icon" onclick="openNav()">&#9776;</span>
+  <div class="header-top">
+    <h2>Mobileri Veliaj</h2>
+  </div>
 </header>
 
 <section class="hero">
@@ -242,6 +271,21 @@ function changeSlide(direction) {
   modalImg.src = fotos[currentIndex].src;
 }
 
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+
+// Mbyll menunë nëse klikon jashtë saj
+window.addEventListener('click', function(e) {
+  if (e.target == document.getElementById("mySidenav")) {
+    closeNav();
+  }
+});
+  
 window.addEventListener('click', function(e) {
   if(e.target == modal) closeModal();
 });
