@@ -52,7 +52,7 @@ text-align:center;
 }
 .hero{
 position:relative;
-height:500px;
+height:100vh; 
 overflow:hidden;
 display:flex;
 flex-direction:column;
@@ -74,6 +74,9 @@ background-size:cover;
 background-position:center;
 z-index:-1;
 animation:zoomOut 20s ease-in-out infinite alternate;
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
 }
 @keyframes zoomOut{
 0%{
@@ -235,6 +238,11 @@ font-size:28px;
 cursor:pointer;
 }
 @media (max-width:768px){
+.hero{
+height:100vh;
+padding:20px;
+}
+}
 
 header{
 flex-direction:row;
